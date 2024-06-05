@@ -1,0 +1,253 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+
+import appStoreQr from '../assets/images/inspirit-appstore.png';
+
+const appStoreImg = '~/assets/images/app-store.png';
+const appStoreDownloadLink = 'https://apps.apple.com/US/app/id6480348915';
+
+const googlePlayImg = '~/assets/images/google-play.png';
+const googlePlayDownloadLink = 'https://apps.apple.com/US/app/id6480348915';
+
+const metadata = {
+  title: 'Mobile App Homepage',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Product', href: '#product' },
+        { text: 'Features', href: '#features' },
+        { text: 'Believers', href: '#believers' },
+        { text: 'FAQs', href: '#faqs' },
+      ]}
+      actions={[
+        {
+          text: 'Download',
+          href: '#download',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="Pray, Learn & Chat"
+    image={{
+      src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'InSpirit - Pray, Learn & Chat',
+    }}
+  >
+    <Fragment slot="title">
+      <span class="text-primary highlight">InSpirit</span> <br /> <span class="text-4xl tracking-normal">Your Personalized Bible Study</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Powered by the most advanced AI technology, InSpirit app offers a sanctuary where seekers of truth can find solace, wisdom, and divine guidance. Our app is designed to facilitate a transformative experience, inviting you to explore the sacred texts with reverence and awe.
+    </Fragment>
+
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="link" href={appStoreDownloadLink}>
+        <Image src={appStoreImg} alt="Download InSpirit" width={200} /><br/>
+        <Image src={appStoreQr} alt="Scan QR Code to install InSpirit" width={200} class="hidden lg:inline-block rounded-xl" />
+      </Button>
+    </div>
+  </Hero2>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    id="product"
+    title="Your Personalized Bible Study"
+    subtitle="In a world filled with noise and distractions, finding moments of peace and connection with the divine can be a challenge. At InSpirit, we invite you to immerse yourself in the sacred teachings of the Bible, connect with a community of like-minded souls, and experience the transformative power of spiritual illumination."
+    tagline=""
+    columns={2}
+    items={[
+      {
+        title: 'Download and Install with Ease',
+        description: `Get started in seconds! Begin your journey by downloading InSpirit from the App Store and dive into a world of spiritual growth.`,
+        icon: 'tabler:square-number-1',
+      },
+      {
+        title: 'Receive Your Daily Inspiration',
+        description:
+          'Start your day with a personalized Verse of the Day tailored to your spiritual needs, bringing you closer to God’s word every morning.',
+        icon: 'tabler:square-number-2',
+      },
+      {
+        title: 'Explore Diverse Devotionals',
+        description: 'Find devotionals that resonate with you by browsing through various topics. From faith and hope to love and wisdom, there’s something for everyone.',
+        icon: 'tabler:square-number-3',
+      },
+      {
+        title: 'Study with Expertly Curated Plans',
+        description: `Follow curated study plans to deepen your understanding and strengthen your faith journey, one step at a time.`,
+        icon: 'tabler:square-number-4',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1437603568260-1950d3ca6eab?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'InSpirit',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="features"
+    isReversed
+    items={[
+      {
+        title: 'Daily Blessing',
+        description:
+          'Begin each day with divine inspiration by setting up personalized daily readings and reflections, infusing your life with spiritual nourishment.',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Biblical Reflections',
+        description:
+          'Dig deep into the sacred scriptures with our curated collection of guided meditations, soulful reflections, and insightful teachings that will enrich your understanding of the Word and deepen your connection with God.',
+        icon: 'tabler:bible',
+      },
+      {
+        title: 'Daily Devotionals',
+        description:
+          'Start each day with a dose of inspiration and encouragement with our daily devotionals, featuring handpicked verses, uplifting messages, and reflections to guide you on your spiritual path.',
+        icon: 'tabler:user-star',
+      },
+      {
+        title: 'And many more...',
+        description: 'Get your personalized content everyday.',
+        icon: 'tabler:sparkles',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Key Features</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    id="believers"
+    title="Trusted by Christians around the World"
+    stats={[
+      { amount: '200K', icon: 'tabler:download' },
+      // { amount: '18.5K', icon: 'tabler:users' },
+      { amount: '5.0', icon: 'tabler:user-star' },
+    ]}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Believers’ Stories"
+    testimonials={[
+      {
+        testimonial: `This app has transformed my daily routine! The personalized Verse of the Day always seems to speak directly to my heart. The devotionals are rich and insightful, and the study plans have deepened my understanding of the Bible. Highly recommend!`,
+        name: 'Sarah M.',
+        job: 'Texas',
+        image: {
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Cary Kennedy Image',
+        },
+      },
+      {
+        testimonial: `I’ve tried many Bible study apps, but this one stands out. The user-friendly interface and the variety of devotionals available make it easy to stay engaged. The curated study plans have been a game-changer for my spiritual growth.`,
+        name: 'John D.',
+        job: 'California',
+        image: {
+          src: 'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+          alt: 'Josh Wilkinson Image',
+        },
+      },
+      {
+        testimonial:
+          'As someone who is always on the go, this app is a blessing. The daily verses are uplifting, and the topical devotionals offer exactly what I need in different seasons of life. The study plans keep me on track and motivated.',
+        name: 'Emily R.',
+        job: 'Florida',
+        image: {
+          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Sidney Hansen Image',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    id="faqs"
+    title="Still have some doubts?"
+    items={[
+      {
+        title: 'How do I get started with the app?',
+        description:
+          'Getting started is easy! Just download the app from the App Store and you’ll be ready to emerge into your spiritual journey in no time.',
+      },
+      {
+        title: 'Are there any subscription options?',
+        description:
+          'Yes, our app offers both free and premium subscription options. The free version includes many great features, while the premium subscription provides access to additional content, exclusive devotionals, and enhanced study plans.',
+      },
+      {
+        title: 'How can I receive the personalized Verse of the Day?',
+        description: `After installing the app, you’ll be guided through a setup process where you can select your preferred themes and topics. Based on your choices, the app will deliver a personalized Verse of the Day to inspire and uplift you every morning.`,
+      },
+      {
+        title: 'What types of devotionals are available?',
+        description:
+          'Our app offers a wide range of devotionals covering various topics such as faith, hope, love, wisdom, and more. You can easily browse and choose devotionals that resonate with your spiritual journey.',
+      },
+      {
+        title: 'How can I track my progress in study plans?',
+        description:
+          'The app features a built-in progress tracker for each study plan. You can see your daily progress, mark completed readings, and set reminders to keep you on track with your spiritual studies.',
+      },
+      {
+        title: 'Can I share content from the app with others?',
+        description:
+          'Absolutely! You can share verses, devotionals, and insights directly from the app via social media, email, or messaging apps. Spread the inspiration and connect with others on their spiritual journey.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    id="download"
+    title="Start your spiritual journey now!"
+    subtitle="Discover a wealth of spiritual resources at your fingertips and enhance your faith with personalized content and expert study plans."
+  >
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="link" href={appStoreDownloadLink}>
+        <Image src={appStoreImg} alt="App Store Image" width={200} /><br/>
+        <Image src={appStoreQr} alt="Scan QR Code to install InSpirit" width={200} class="hidden lg:inline-block rounded-xl" />
+      </Button>
+    </div>
+  </CallToAction>
+</Layout>
