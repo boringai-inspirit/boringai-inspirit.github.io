@@ -93,5 +93,6 @@ export default defineConfig({
   },
 
   //custom configs
-  outDir: './docs'
+  outDir: './docs',
+  site: 'https://inspirit.boringai.app',
 });
