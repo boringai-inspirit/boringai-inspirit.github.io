@@ -3,6 +3,7 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     { text: 'Product', href: '/#product' },
+    { text: 'Listen', href: '/#samples' },
     { text: 'Features', href: '/#features' },
     { text: 'Believers', href: '/#believers' },
     { text: 'FAQs', href: '/#faqs' },
@@ -15,6 +16,7 @@ export const footerData = {
     {
       title: 'Product',
       links: [
+        { text: 'Listen', href: '#samples' },
         { text: 'Features', href: '#features' },
         { text: 'Believers', href: '#believers' },
         { text: 'FAQs', href: '#faqs' },
