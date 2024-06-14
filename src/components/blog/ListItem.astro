@@ -64,25 +64,19 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
     <header>
       <div class="mb-1">
         <span class="text-sm">
-          <Icon name="tabler:clock" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
-          <time datetime={String(post.publishDate)} class="inline-block">{getFormattedDate(post.publishDate)}</time>
           {
-            post.author && (
+            post.category && (
               <>
-                {' '}
-                · <Icon name="tabler:user" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
-                <span>{post.author.replaceAll('-', ' ')}</span>
+                <a class="hover:underline" href={getPermalink(post.category.slug, 'category')}>
+                  {post.category.title}
+                </a>
               </>
             )
           }
           {
-            post.category && (
+            post.audioLength && (
               <>
-                {' '}
-                ·{' '}
-                <a class="hover:underline" href={getPermalink(post.category.slug, 'category')}>
-                  {post.category.title}
-                </a>
+                &nbsp;· <span>{Math.ceil(post.audioLength / 60)}</span> mins
               </>
             )
           }

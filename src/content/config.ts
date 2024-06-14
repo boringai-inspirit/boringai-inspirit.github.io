@@ -60,6 +60,8 @@ const postCollection = defineCollection({
     author: z.string().optional(),
 
     metadata: metadataDefinition(),
+    audio: z.string().optional(),
+    audioLength: z.number().optional(),
   }),
 });
 

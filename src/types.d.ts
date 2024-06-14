@@ -42,6 +42,12 @@ export interface Post {
 
   /**  */
   readingTime?: number;
+
+  /**  */
+  audio?: string;
+
+  /**  */
+  audioLength?: number;
 }
 
 export interface Taxonomy {

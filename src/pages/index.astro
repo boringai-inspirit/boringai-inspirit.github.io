@@ -14,14 +14,14 @@ import Stats from '~/components/widgets/Stats.astro';
 import Button from '~/components/ui/Button.astro';
 import Image from '~/components/common/Image.astro';
 
-import appStoreQr from '../assets/images/inspirit-appstore.png';
+import appStoreQr from '~/assets/images/inspirit-appstore.png';
 
 const appStoreImg = '~/assets/images/app-store.png';
 const appStoreDownloadLink = 'https://apps.apple.com/US/app/id6480348915';
 
 const googlePlayImg = '~/assets/images/google-play.png';
 const googlePlayDownloadLink = 'https://apps.apple.com/US/app/id6480348915';
-
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import heroImage from '~/assets/images/default.png';
 
 const metadata = {
@@ -60,11 +60,11 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      <span class="text-primary highlight">InSpirit</span> <br /> <span class="text-4xl tracking-normal">Your Personalized Bible Study</span>
+      <span class="text-primary highlight">InSpirit</span> <br /> <span class="text-4xl tracking-normal">Biblical Meditation & Chat</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Powered by the most advanced AI technology, InSpirit app offers a sanctuary where seekers of truth can find solace, wisdom, and divine guidance. Our app is designed to facilitate a transformative experience, inviting you to explore the sacred texts with reverence and awe.
+      Your spiritual companion for Biblical Meditaion with daily Bible reading, guided study plan, and spiritual growth.
     </Fragment>
 
     <div slot="actions" class="flex max-w-sm gap-4">
@@ -74,6 +74,18 @@ const metadata = {
       </Button>
     </div>
   </Hero2>
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Biblical Guidance Audio Series"
+    information={`Explore our collection of audio series to find emotional support from the Holy guidance.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
 
   <!-- Features3 Widget ************** -->
 

@@ -5,6 +5,13 @@ import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+import appStoreQr from '~/assets/images/inspirit-appstore.png';
+
+const appStoreImg = '~/assets/images/app-store.png';
+const appStoreDownloadLink = 'https://apps.apple.com/US/app/id6480348915';
 // import PostTags from "~/components/blog/Tags.astro";
 
 import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
@@ -24,7 +31,7 @@ const currentPage = page.currentPage ?? 1;
 // const allTags = await findTags();
 
 const metadata = {
-  title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `Explore Audio Series${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,
@@ -38,9 +45,9 @@ const metadata = {
 <Layout metadata={metadata}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline
-      subtitle="A statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind"
+      subtitle="Explore our collection of audio series to find emotional support from the Holy guidance"
     >
-      The Blog
+      Explore Audio Series
     </Headline>
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
@@ -48,5 +55,20 @@ const metadata = {
       <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
       <PostTags tags={allTags}  title="Search by Tags:" />
     -->
+
+    <!-- CallToAction Widget *********** -->
+
+    <CallToAction
+      id="download"
+      title="And more on the app"
+      subtitle="Install our app now to gain full access to every insightful series and episode, transforming your journey with Biblical Meditation, Guidance, and Emotional Support."
+    >
+      <div slot="actions" class="flex max-w-sm gap-4">
+        <Button variant="link" href={appStoreDownloadLink}>
+          <Image src={appStoreImg} alt="App Store Image" width={200} /><br/>
+          <Image src={appStoreQr} alt="Scan QR Code to install InSpirit" width={200} class="hidden lg:inline-block rounded-xl" />
+        </Button>
+      </div>
+    </CallToAction>
   </section>
 </Layout>

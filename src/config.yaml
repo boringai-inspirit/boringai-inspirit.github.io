@@ -34,7 +34,7 @@ i18n:
 apps:
   blog:
     isEnabled: true
-    postsPerPage: 6
+    postsPerPage: 10
 
     post:
       isEnabled: true
@@ -44,7 +44,7 @@ apps:
 
     list:
       isEnabled: true
-      pathname: 'series' # Blog main path, you can change this to "articles" (/articles)
+      pathname: 'samples' # Blog main path, you can change this to "articles" (/articles)
       robots:
         index: true
 
