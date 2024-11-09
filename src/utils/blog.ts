@@ -57,6 +57,7 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     metadata = {},
     audio,
     audioLength,
+    youtubeId,
   } = data;
 
   const slug = cleanSlug(rawSlug); // cleanSlug(rawSlug.split('/').pop());
@@ -103,6 +104,8 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     audio: audio,
 
     audioLength: audioLength,
+
+    youtubeId: youtubeId,
   };
 };
 

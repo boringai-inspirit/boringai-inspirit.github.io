@@ -62,6 +62,7 @@ const postCollection = defineCollection({
     metadata: metadataDefinition(),
     audio: z.string().optional(),
     audioLength: z.number().optional(),
+    youtubeId: z.string().optional(),
   }),
 });
 

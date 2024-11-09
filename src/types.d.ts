@@ -48,6 +48,9 @@ export interface Post {
 
   /**  */
   audioLength?: number;
+
+  /**  */
+  youtubeId?: string;
 }
 
 export interface Taxonomy {

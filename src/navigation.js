@@ -2,6 +2,7 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
+    { text: 'Chat', href: 'https://inspiritdaily.com' },
     { text: 'Product', href: '/#product' },
     { text: 'Listen', href: '/#samples' },
     { text: 'Features', href: '/#features' },
@@ -16,6 +17,7 @@ export const footerData = {
     {
       title: 'Product',
       links: [
+        { text: 'Chat', href: 'https://inspiritdaily.com' },
         { text: 'Listen', href: '#samples' },
         { text: 'Features', href: '#features' },
         { text: 'Believers', href: '#believers' },

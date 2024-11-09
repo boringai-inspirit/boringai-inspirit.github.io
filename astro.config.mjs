@@ -94,5 +94,5 @@ export default defineConfig({
 
   //custom configs
   // outDir: './docs',
-  site: 'https://inspirit.boringai.app',
+  site: 'https://podcast.inspiritdaily.com',
 });
