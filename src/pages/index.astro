@@ -62,11 +62,11 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      <span class="text-primary highlight">InSpirit</span> <br /> <span class="text-4xl tracking-normal">Biblical Meditation & Chat</span>
+      <span class="text-primary highlight">InSpirit</span> <br /> <span class="text-4xl tracking-normal">Your Spiritual Companion</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Your spiritual companion for Biblical Meditaion with daily Bible reading, guided study plan, and spiritual growth.
+      Discover the power of faith, reflection, and connection with <strong>InSpirit</strong>, the app designed to nurture your spirit and deepen your relationship with God.
       <br/><br/>
       <Button variant="primary" class="w-3/5" href="https://inspiritdaily.com">
         Talk With InSpirit Now
@@ -97,33 +97,9 @@ const metadata = {
 
   <Features3
     id="product"
-    title="Your Personalized Bible Study"
-    subtitle="In a world filled with noise and distractions, finding moments of peace and connection with the divine can be a challenge. At InSpirit, we invite you to immerse yourself in the sacred teachings of the Bible, connect with a community of like-minded souls, and experience the transformative power of spiritual illumination."
+    title="Why InSpirit?"
+    subtitle="Life is full of challenges, but you don’t have to face them alone. InSpirit offers a supportive space to find peace, wisdom, and God’s presence in your daily life. Whether you’re seeking answers, solace, or inspiration, we’re here to guide you every step of the way."
     tagline=""
-    columns={2}
-    items={[
-      {
-        title: 'Download and Install with Ease',
-        description: `Get started in seconds! Begin your journey by downloading InSpirit from the App Store and dive into a world of spiritual growth.`,
-        icon: 'tabler:square-number-1',
-      },
-      {
-        title: 'Receive Your Daily Inspiration',
-        description:
-          'Start your day with a personalized Verse of the Day tailored to your spiritual needs, bringing you closer to God’s word every morning.',
-        icon: 'tabler:square-number-2',
-      },
-      {
-        title: 'Explore Diverse Devotionals',
-        description: 'Find devotionals that resonate with you by browsing through various topics. From faith and hope to love and wisdom, there’s something for everyone.',
-        icon: 'tabler:square-number-3',
-      },
-      {
-        title: 'Study with Expertly Curated Plans',
-        description: `Follow curated study plans to deepen your understanding and strengthen your faith journey, one step at a time.`,
-        icon: 'tabler:square-number-4',
-      },
-    ]}
     image={{
       src: 'https://images.unsplash.com/photo-1437603568260-1950d3ca6eab?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       alt: 'InSpirit',
@@ -137,27 +113,32 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'Daily Blessing',
+        title: 'Real-Time Spiritual Chat',
         description:
-          'Begin each day with divine inspiration by setting up personalized daily readings and reflections, infusing your life with spiritual nourishment.',
-        icon: 'tabler:wand',
+          'Your personal guide for faith-based conversations. Ask questions, share your worries, or receive personalized prayers whenever you need them.',
+        icon: 'tabler:message-chatbot',
       },
       {
-        title: 'Biblical Reflections',
+        title: 'Daily Scripture & Devotions',
         description:
-          'Dig deep into the sacred scriptures with our curated collection of guided meditations, soulful reflections, and insightful teachings that will enrich your understanding of the Word and deepen your connection with God.',
+          'Start every day with uplifting Bible verses and reflections tailored to inspire and empower you.',
+        icon: 'tabler:blockquote',
+      },
+      {
+        title: 'Guided Prayers & Meditations',
+        description:
+          'Find peace and clarity through calming meditations and heartfelt prayers, crafted to soothe your soul.',
+        icon: 'tabler:user-heart',
+      },
+      {
+        title: 'Bible Study Plans',
+        description: 'Explore the Word of God with structured plans and insights that deepen your understanding of scripture.',
         icon: 'tabler:bible',
       },
       {
-        title: 'Daily Devotionals',
-        description:
-          'Start each day with a dose of inspiration and encouragement with our daily devotionals, featuring handpicked verses, uplifting messages, and reflections to guide you on your spiritual path.',
-        icon: 'tabler:user-star',
-      },
-      {
-        title: 'And many more...',
-        description: 'Get your personalized content everyday.',
-        icon: 'tabler:sparkles',
+        title: 'Audio Bible',
+        description: 'Immerse yourself in God’s Word wherever you are with our engaging audio Bible experience.',
+        icon: 'tabler:headphones',
       },
     ]}
     image={{
@@ -166,13 +147,39 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Key Features</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Key Features to Strengthen Your Faith</h3>
     </Fragment>
   </Content>
 
+  <Features3
+    id="product"
+    title="How InSpirit Can Transform Your Faith Journey"
+    subtitle=""
+    tagline=""
+    columns={3}
+    items={[
+      {
+        title: 'Find Peace in Chaos',
+        description: `Navigate life’s uncertainties with God’s strength and reassurance.`,
+        icon: 'tabler:empathize',
+      },
+      {
+        title: 'Grow Closer to God',
+        description:
+          'Strengthen your relationship with Christ through daily guidance and reflection.',
+        icon: 'tabler:cross',
+      },
+      {
+        title: 'Feel Supported Anytime',
+        description: 'Connect with our chat function for instant spiritual guidance and encouragement.',
+        icon: 'tabler:device-mobile-message',
+      },
+    ]}
+  />
+
   <!-- Stats Widget ****************** -->
 
-  <Stats
+  <!-- <Stats
     id="believers"
     title="Trusted by Christians around the World"
     stats={[
@@ -180,39 +187,39 @@ const metadata = {
       // { amount: '18.5K', icon: 'tabler:users' },
       { amount: '5.0', icon: 'tabler:user-star' },
     ]}
-  />
+  /> -->
 
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title="Believers’ Stories"
+    title="What Our Users Say"
     testimonials={[
       {
-        testimonial: `This app has transformed my daily routine! The personalized Verse of the Day always seems to speak directly to my heart. The devotionals are rich and insightful, and the study plans have deepened my understanding of the Bible. Highly recommend!`,
-        name: 'Sarah M.',
-        job: 'Texas',
+        testimonial: `InSpirit has been a lifeline for me during tough times. The chat feature feels like talking to a friend who understands and supports my faith journey.`,
+        name: 'Emily',
+        job: 'InSpirit User',
         image: {
           src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Cary Kennedy Image',
+          alt: 'Emily',
         },
       },
       {
-        testimonial: `I’ve tried many Bible study apps, but this one stands out. The user-friendly interface and the variety of devotionals available make it easy to stay engaged. The curated study plans have been a game-changer for my spiritual growth.`,
-        name: 'John D.',
-        job: 'California',
+        testimonial: `The daily devotionals and personalized prayers are exactly what I need to start my day with purpose and peace.`,
+        name: 'John',
+        job: 'InSpirit User',
         image: {
           src: 'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-          alt: 'Josh Wilkinson Image',
+          alt: 'John',
         },
       },
       {
         testimonial:
-          'As someone who is always on the go, this app is a blessing. The daily verses are uplifting, and the topical devotionals offer exactly what I need in different seasons of life. The study plans keep me on track and motivated.',
-        name: 'Emily R.',
-        job: 'Florida',
+          'As someone who is always on the go, this app is a blessing. The daily verses are uplifting, and the topical devotionals offer exactly what I need in different seasons of life.',
+        name: 'Jessica',
+        job: 'InSpirit User',
         image: {
           src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Sidney Hansen Image',
+          alt: 'Jessica',
         },
       },
     ]}
@@ -261,7 +268,7 @@ const metadata = {
   <CallToAction
     id="download"
     title="Start your spiritual journey now!"
-    subtitle="Discover a wealth of spiritual resources at your fingertips and enhance your faith with personalized content and expert study plans."
+    subtitle="Join thousands of believers who have found solace, inspiration, and connection with InSpirit.<br/><br/><strong>📥 Download Now</strong><br/>Experience God’s love and guidance like never before."
   >
     <div slot="actions" class="flex max-w-sm gap-4">
       <Button variant="link" href={appStoreDownloadLink}>
